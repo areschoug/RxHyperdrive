@@ -1,9 +1,9 @@
 //
-//  Error.swift
+//  Errors.swift
 //  Rx
 //
 //  Created by Krunoslav Zaher on 3/28/15.
-//  Copyright (c) 2015 Krunoslav Zaher. All rights reserved.
+//  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
 
 import Foundation
@@ -34,13 +34,17 @@ public enum RxError
     */
     case ArgumentOutOfRange
     /**
-    Sequence doesn't contain any element.
+    Sequence doesn't contain any elements.
     */
     case NoElements
     /**
-    Sequence contains more then one element.
+    Sequence contains more than one element.
     */
     case MoreThanOneElement
+    /**
+     Timeout error.
+     */
+    case Timeout
 }
 
 public extension RxError {
@@ -58,9 +62,11 @@ public extension RxError {
         case .ArgumentOutOfRange:
             return "Argument out of range."
         case .NoElements:
-            return "Sequence doesn't contain any element."
+            return "Sequence doesn't contain any elements."
         case .MoreThanOneElement:
-            return "Sequence contains more then one element."
+            return "Sequence contains more than one element."
+        case .Timeout:
+            return "Sequence timeout."
         }
     }
 }
