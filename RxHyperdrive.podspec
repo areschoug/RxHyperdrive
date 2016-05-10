@@ -12,7 +12,6 @@ Pod::Spec.new do |spec|
   spec.osx.deployment_target = '10.9'
   spec.watchos.deployment_target = '2.0'
   spec.requires_arc = true
-  spec.dependency 'Hyperdrive', '~> 0.2.0'
   spec.dependency 'RxSwift', '2.4'
 end
 
